@@ -1,0 +1,23 @@
+﻿@model CleanMvc.Application.DTOs.CategoriaDTO
+
+<h3>Deletar Categoria</h3>
+
+<h4>Quer realmente deletar a categoria?</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+
+    <form asp-action="Deletar">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-info">Voltar para Lista</a>
+    </form>
+</div>
